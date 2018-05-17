@@ -20,7 +20,7 @@ def predict(image):
 	label_text = subjects[label]
 	
 	draw_rectangle(img, rect)
-	draw_text(img, label_text, rect[0], rect[1]-5)
+	draw_text(img, label_text + " " + confidence, rect[0], rect[1]-5)
 	
 	return img
 
