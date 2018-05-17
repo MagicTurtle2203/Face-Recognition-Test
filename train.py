@@ -25,7 +25,7 @@ def prepare_training_data(data_path):
 	for dir_name in dirs:
 		if not dir_name.startswith('s'):
 			continue
-		#creates a label for each subject by removing the s from the directory name and converting to an int
+		#creates a label for each subject by removing the 's' from the directory name and converting to an int
 		label = int(dir_name.replace('s', ''))
 		subject_path = data_path + '/' + dir_name
 		subject_images = os.listdir(subject_path)
@@ -57,4 +57,4 @@ print("Total labels: {}".format(len(labels)))
 
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 face_recognizer.train(faces, np.array(labels))
-face_recognizer.save('trainer.xml')
+face_recognizer.save('trainer.yml')
