@@ -1,5 +1,7 @@
 #based on tutorial found here: https://www.superdatascience.com/opencv-face-recognition/
 import os
+import shutil
+import zipfile
 import cv2
 import numpy as np
 
@@ -49,7 +51,11 @@ def prepare_training_data(data_path):
 	return faces, labels
 
 print("Preparing data...")
-faces, labels = prepare_training_data("training-data")
+extracted_data_path = "training-data"
+zip_ref = zipfile.ZipFile("data.zip", 'r')
+zip_ref.exractall(extracted_data_path)
+zip_ref.close()
+faces, labels = prepare_training_data(extracted_data_path)
 print("Data prepared")
 
 print("Total faces: {}".format(len(faces)))
@@ -58,3 +64,9 @@ print("Total labels: {}".format(len(labels)))
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 face_recognizer.train(faces, np.array(labels))
 face_recognizer.save('trainer.yml')
+
+# Try to remove tree; if failed show an error using try...except on screen
+try:
+    shutil.rmtree(extracted_data_path)
+except OSError, e:
+    print ("Error: %s - %s." % (e.filename,e.strerror))
