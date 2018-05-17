@@ -23,3 +23,6 @@ def predict(image):
 	draw_text(img, label_text, rect[0], rect[1]-5)
 	
 	return img
+
+face_recognizer = cv2.face.LBPHFaceRecognizer_create()
+face_recognizer.read('trainer.xml')
