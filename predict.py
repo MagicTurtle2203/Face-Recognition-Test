@@ -24,5 +24,15 @@ def predict(image):
 	
 	return img
 
+for file in os.listdir("test-data"):
+	os.remove("test-data/" + file)
+
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
-face_recognizer.read('trainer.xml')
+face_recognizer.read("trainer.xml")
+
+print("Predicting images...")
+for num, image in enumerate(os.listdir("test-data")):
+	test_image = cv2.imread("test-data/" + image)
+	predicted_image = predict(test_image)
+	cv2.imwrite("predictions/" + str(num) + ".jpg", predicted_image)
+print("Prediction complete!")
