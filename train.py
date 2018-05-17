@@ -3,9 +3,6 @@ import os
 import cv2
 import numpy as np
 
-#list of people to be trained on
-subjects = []
-
 def detect_face(image):
 	gray_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	face_cascade = cv2.CascadeClassifier("face_cascades/lbpcascade_frontalface.xml")
