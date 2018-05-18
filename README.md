@@ -1,2 +1,3 @@
 # Face-Recognition-Test
-Training a face recognizer using OpenCV
+## Training a face recognizer using OpenCV
+
