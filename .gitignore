@@ -1,6 +1,0 @@
-.vscode/
-__pycache__/
-
-# Temp folder created for training 
-training-data/
-data.zip
