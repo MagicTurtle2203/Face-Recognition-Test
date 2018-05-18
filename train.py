@@ -36,11 +36,11 @@ def prepare_training_data(data_path):
 		subject_images = os.listdir(subject_path)
 
 		for image_name in subject_images:
-			print("working on " + image_name)
+			print("working on " + subject_path + '/' + image_name)
 			image_path = subject_path + '/' + image_name
 			image = cv2.imread(image_path)
-			cv2.imshow("Training...", image)
-			cv2.waitKey(100)
+			#cv2.imshow("Training...", image)
+			#cv2.waitKey(100)
 
 			face, rect = detect_face(image)
 

@@ -2,7 +2,7 @@ import os
 import cv2
 from train import detect_face
 
-subjects = ["Jiu", "Handong", "Gahyeon", "Yoohyeon", "Dami", "Siyeon", "Sua"]
+subjects = ["Jiu", "Handong", "Gahyeon", "Yoohyeon"]
 
 
 def draw_rectangle(img, rect):
@@ -40,5 +40,5 @@ for num, image in enumerate(os.listdir("test-data")):
 	print("working on " + image)
 	test_image = cv2.imread("test-data/" + image)
 	predicted_image = predict(test_image)
-	cv2.imwrite("predictions/" + str(num) + ".jpg", predicted_image)
+	cv2.imwrite("predictions/" + image, predicted_image)
 print("Prediction complete!")
