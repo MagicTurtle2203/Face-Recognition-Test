@@ -1,7 +1,5 @@
 import os
 import shutil
-import zipfile
-import cv2
 import numpy as np
 
 
@@ -55,11 +53,7 @@ def prepare_training_data(data_path):
 
 if __name__ == "__main__":
 	print("Preparing data...")
-	extracted_data_path = "training-data"
-	#zip_ref = zipfile.ZipFile("data.zip", 'r')
-	#zip_ref.extractall(extracted_data_path)
-	#zip_ref.close()
-	faces, labels = prepare_training_data(extracted_data_path)
+	faces, labels = prepare_training_data("training-data")
 	print("Data prepared")
 
 	print("Total faces: {}".format(len(faces)))
@@ -68,5 +62,3 @@ if __name__ == "__main__":
 	face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 	face_recognizer.train(faces, np.array(labels))
 	face_recognizer.save('trainer.yml')
-
-	#shutil.rmtree(extracted_data_path)
