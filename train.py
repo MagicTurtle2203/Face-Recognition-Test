@@ -1,4 +1,3 @@
-# based on tutorial found here: https://www.superdatascience.com/opencv-face-recognition/
 import os
 import shutil
 import zipfile
