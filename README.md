@@ -5,7 +5,7 @@ This face recognition program is based on the tutorial found [here](https://www.
 
 Another problem I ran into was that opencv's face detection algorithms don't work perfectly. It detects some pictures as containing no faces even though the main focus of the image is the idol's face. This leads to instances where it trains to recognize a patch of foliage in the picture as the idol's face instead of the idol's actual face. Example image below. I wonder how it might perform if it were to be trained on people from a different ethnic background. 
 
-![Sample text](https://github.com/SimpleTurtle/SimpleTurtle/blob/master/images/22344172_1300303463430014_37224820856848384_n.jpg=400x400)
+![Sample text](https://github.com/SimpleTurtle/SimpleTurtle/blob/master/images/22344172_1300303463430014_37224820856848384_n.jpg&s=100)
 
 I added successful prediction pictures to show what the face recognition program is able to do when it runs correctly. These are available to view [here](predictions/).
 
