@@ -17,4 +17,6 @@ Or, it detects a doll's face even though there is a much larger face nearby.
 
 <img src="https://github.com/SimpleTurtle/SimpleTurtle/blob/master/images/jiu1.jpg" width="40%">
 
-I added successful prediction pictures to show what the face recognition program is able to do when it runs correctly. These are available to view [here](predictions/).
+I added successful prediction pictures to show what the face recognition program is able to do when it runs correctly. These are available to view [here](predictions/). 
+
+As one can see, this prediction program is not very accurate. It was only able to classify about half of the pictures correctly, even though some of the same images were used to train the program. The program was able to detect and train off of 1550 faces total, so perhaps many more pictures would be required to make the program more accurate. 
