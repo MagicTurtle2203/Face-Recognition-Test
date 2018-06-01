@@ -15,8 +15,13 @@ Or, it detects a doll's face even though there is a much larger face nearby.
 
 Originally. I had attempted to train the face recognition program with four idols' faces, but that did not seem to work well. With four different subjects, the program was somehow unable to determine the faces in pictures that it had already been trained with. The percent of faces it was able to guess correctly was also quite low. Reducing the number of subjects to three improved the accuracy a lot, and the program once again became able to recognize faces in pictures that it had been trained with before. 
 
+### Example prediction pictures
+#### Correctly predicted
+<img src="predictions/Gahyeon4.jpg" width="60%">
 
-## new pictures soon
-I added successful prediction pictures to show what the face recognition program is able to do when it runs correctly. These are available to view [here](predictions/). 
+#### Wrongly predicted
+<img src="predictions/Handong5.jpg" width="50%">
+
+More pictures are available to view [here](predictions/). 
 
 As one can see, this prediction program is not very accurate. It was only able to classify about half of the pictures correctly, even though some of the same images were used to train the program. The program was able to detect and train off of 1280 faces total, so perhaps many more pictures would be required to make the program more accurate. 
