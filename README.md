@@ -22,6 +22,6 @@ Originally. I had attempted to train the face recognition program with four idol
 #### Wrongly predicted
 <img src="predictions/Handong5.jpg" width="50%">
 
-More pictures are available to view [here](predictions/). 
+More prediction pictures are available to view [here](predictions/). 
 
 As one can see, this prediction program is not very accurate. It was only able to classify about half of the pictures correctly, even though some of the same images were used to train the program. The program was able to detect and train off of 1280 faces total, so perhaps many more pictures would be required to make the program more accurate. 
